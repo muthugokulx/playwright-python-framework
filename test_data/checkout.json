@@ -1,0 +1,11 @@
+{
+  "customer": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "postal_code": "600001"
+  },
+  "products": [
+    "Sauce Labs Backpack",
+    "Sauce Labs Bike Light"
+  ]
+}

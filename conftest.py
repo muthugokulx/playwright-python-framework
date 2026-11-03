@@ -20,6 +20,11 @@ def users():
     return load_json("users.json")
 
 
+@pytest.fixture(scope="session")
+def checkout_data():
+    return load_json("checkout.json")
+
+
 @pytest.fixture
 def login_page(page):
     login = LoginPage(page)

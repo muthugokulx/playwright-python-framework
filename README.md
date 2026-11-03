@@ -12,12 +12,22 @@ playwright-python-framework/
 ├── pages/                  # Page Object Model classes
 │   ├── base_page.py        # Common actions shared by all pages
 │   ├── login_page.py
-│   └── inventory_page.py
+│   ├── inventory_page.py   # Product list, sorting, add/remove
+│   ├── product_page.py     # Single product detail
+│   ├── cart_page.py
+│   ├── checkout_page.py    # Info form, overview, complete steps
+│   └── side_menu.py        # Burger menu (logout, reset app state)
 ├── tests/                  # Test cases, grouped by feature
 │   ├── test_login.py
-│   └── test_inventory.py
+│   ├── test_inventory.py
+│   ├── test_sorting.py
+│   ├── test_product_detail.py
+│   ├── test_cart.py
+│   ├── test_checkout.py
+│   └── test_side_menu.py
 ├── test_data/
-│   └── users.json          # Test data kept out of test code
+│   ├── users.json          # Test data kept out of test code
+│   └── checkout.json       # Customer details and products to buy
 ├── utils/
 │   ├── data_loader.py      # Helper to read test data files
 │   └── logger.py           # Shared logger

@@ -18,5 +18,8 @@ class LoginPage(BasePage):
         self.password_input.fill(password)
         self.login_button.click()
 
+    def expect_on_page(self):
+        expect(self.login_button).to_be_visible()
+
     def expect_error(self, text: str):
         expect(self.error_message).to_contain_text(text)
