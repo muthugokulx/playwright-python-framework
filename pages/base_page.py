@@ -1,3 +1,5 @@
+import re
+
 from playwright.sync_api import Page, expect
 
 from config.settings import settings
@@ -20,4 +22,4 @@ class BasePage:
         return self.page.title()
 
     def expect_url_contains(self, text: str):
-        expect(self.page).to_have_url(f"**{text}**")
+        expect(self.page).to_have_url(re.compile(re.escape(text)))
